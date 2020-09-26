@@ -1,0 +1,40 @@
+<html>
+<head>
+  <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css?family=Crimson+Text|Work+Sans:400,700" rel="stylesheet">
+  <title>Gasser Development</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body onload="Action();">
+<!-- Side Bar -->
+<%- include('partials/sidebar.ejs') %>
+<!-- Added HTML Via JavaScript -->
+<script>
+  function Action(){
+    var audio = new Audio('./magicword.mp3'); 
+    audio.play();
+    }
+</script>
+<style>
+    .frame {
+    white-space: nowrap;
+    text-align: center; 
+    margin: 1em 0;
+    }
+    .helper {
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+  }
+  .imaeg {
+    background: #3A6F9A;
+    vertical-align: middle;
+}
+</style>
+
+<div id="noise" onclick="Action();" class=frame>
+    <span class="helper" style="right: 0;"></span><img class="imaeg" src="ahahah.gif" style = "width: 80%; right: 0;" />
+</div>
+</body>
+</html> 

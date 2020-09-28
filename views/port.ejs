@@ -4,6 +4,7 @@
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <link href="https://fonts.googleapis.com/css?family=Crimson+Text|Work+Sans:400,700" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="favicon.png">
   <script src="content.js"></script>
   <title>Gasser Development</title>
 </head>
@@ -13,22 +14,26 @@
       let name = document.getElementById("APIGrab").value
       let URL = "http://35.209.53.64/cgi-bin/TensorFlowApi/world.py/?name=" + name;
       var xmlHttp = new XMLHttpRequest();
+      document.getElementById("Cool").innerText = "Loading . . . "
       xmlHttp.open( "GET", URL , true );
       xmlHttp.send();
-      document.getElementById("Cool").innerText = "Loading . . . This may take up to 16 Seconds"
       xmlHttp.onreadystatechange = function () {
-        var Text = xmlHttp.responseText;
-        var Prob = Text.search("Probability")
-        Prob = Text.slice(Prob+15,Prob+23);
-        var Gend = Text.search("Gender");
-        Gend = Text.slice(Gend+10,Gend+11);
-        if(Gend == 'M'){
-          Gend = "Male";
-        }
-        else{
-          Gend = "Female";
-        }
-        document.getElementById("Cool").innerText = name + " is " + Prob + "% likely " + Gend;
+      var Text = xmlHttp.responseText;
+      var Prob = Text.search("Probability")
+      Prob = Text.slice(Prob+15,Prob+23);
+      var Gend = Text.search("Gender");
+      Gend = Text.slice(Gend+10,Gend+11);
+      let Message ="";
+      if(Gend == 'M'){
+        Message = name + " is " + Prob + "% likely Male";
+      }
+      else if(Gend == 'F'){
+        Message = name + " is " + Prob + "% likely Female";
+      }
+      else{
+        Message = "Error: please, load this page as HTTP not HTTPS (reason in description) Sorry for the inconvenience!"
+      }
+        document.getElementById("Cool").innerText = Message;
       }
     }
   </script>
@@ -36,32 +41,33 @@
 <%- include('partials/sidebar.ejs') %>
 <!-- Added HTML Via JavaScript -->
 <div class="window" style = "padding-left: 25%; padding-top: 5%; padding-right: 5%;">
-  <h1 class = "Header" style = "padding-bottom: 5%;">
+  <h1 class = "Header" style = "padding-bottom: 5%;font-size:7vh;">
     Portfolio   
-    <br><button id = "pbtn" class="nbtn" style="width: 14%;">Previous</button> <button id = "nbtn" class="nbtn">Next</button>
+    <br><button id = "pbtn" class="nbtn" style=" width:18vh;">Previous</button> <button id = "nbtn" class="nbtn">Next</button>
   </h1>
     <span id = "addToMe" style = "display: block; background-color: #e6e6ff; width: 100%; border-radius: 20px; padding: 1%; font-size: 4vh;">
       NameGuess Machine Learning API 
       <p  style = "font-size: 1.85vh;" id = "main">
-        <span style = "display: block; background-color: #c8c8ff; width: 46vh; border-radius: 20px;">
-          <img style ="width: 15vh" src = "cloud-logo.svg">
-          <img style ="width: 15vh" src= "lockup.svg">
-          <img style ="width: 3vh" src= "tux.png">
-          <img style ="width: 10vh" src= "apache2.png">
+        <span style = "display: block; background-color: #c8c8ff; width: 36vh; border-radius: 20px;">
+          <img style ="width: 12vh" src = "cloud-logo.svg">
+          <img style ="width: 12vh" src= "lockup.svg">
+          <img style ="width: 2vh" src= "tux.png">
+          <img style ="width: 7vh" src= "apache2.png">
         </span>
-        Created an API that utilizes TensorFlow on Google Cloud Platform Compute Engine. This API receives a HTTP request that contains a Name parameter. 
+        Created an API that utilizes TensorFlow on Google Cloud Platform Compute Engine. This API receives a HTTP request that contains a Name parameter.
         My NameGuess.py Neural Network then is given the string, converts the data for most optimal accuracy. Firstly trimming to 9 characters long, 
         then zero-filling from the back. Next it converts the characters into their ascii values, after this for improved accuracy I convert 
         the name into a 2 Dimensional array of ones and zeros 
         (OneHotEncoding) then the Neural Network uses Convoluted Neural Layers to do its work and I return the NN Answer in a JSON Package. <br><br>
         Hosted on Google Cloud Compute Engine (Similar to Azure Compute).
+        (Have not SSL Certified my API Server yet, therefore, you will need to load this page as http not https to use the search bar below.)
         <br>
         <br>
         Name:
         <input id="APIGrab">
         </input>
         <button onclick="CallAPI()" >Call API
-        </button><p style="font-size: 1.5vh;"><em>To Note, This is Hosted on the <strong>Cheapest</strong> Device in GCP so it takes Approximately 10 Seconds to Work.</em></p>
+        </button><p style="font-size: 1.5vh;"><em>To Note, slow traffic will cause the server to have to rebuild the python interpreter, so your first call may be the slowest.</em></p>
     </p>
     </span>
     <span style = "display: block; width: 100%; border-radius: 20px; padding: 1%; font-size: 4vh;" id="Cool">

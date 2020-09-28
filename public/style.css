@@ -50,29 +50,29 @@ body {
     background-color: #fff5f5;
     height: 100%;
     width: 100%;
-    position: fixed;
     z-index: 0;
     padding-left: 20%;
+    overflow: scroll;
   }
   .Profile{
     background-repeat: no-repeat;
     display: block;
     margin-left: auto;
     margin-right: auto;
-    width: 35vh;
+    width: 40vh;
     border-radius: 50%;
   }
   .Header{
-   font-size: 3vw;
-   color: #B22222;
+    font-size:7vh;
+    color: #B22222;
   }
   .nbtn {
     text-decoration: none;
-    font-size: 2vw;
+    font-size: 40%;
     background-color: #e6e6ff;
     color: #B22222;
     text-align: center;
-    width:10%;
+    width:12vh;
     border: 2px solid #B22222;
     transition-duration: .4s;
   }    

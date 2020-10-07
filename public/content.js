@@ -28,19 +28,6 @@ var projects = new Array(
     </p>
     `,
     `
-    Pantry Serverless Microservices Application (In Development)
-    <p  style = "font-size: 1.85vh;">
-        <span style = "display: block; background-color: #c8c8ff; width: 36vh; border-radius: 20px;">
-            <img style ="width: 12vh" src = "docker.png">
-            <img style ="width: 10vh" src= "nodejs.svg">
-            <img style ="width: 12vh" src= "kub.png"> 
-        </span>
-        <strong>Core Functionality</strong><br>User’s will be able to search recipes, and place recipes to a ‘cooking queue’, place recipes into a favorites list, add recipes to their private recipe list, and mark recipes as completed. Users will be able to add any pantry item into their online pantry, via manual logging or via barcode scanning from a camera. Users can create different grocery lists, one generated list will be ingredients needed from x marked recipes, minus the ingredients we already have in the pantry. Users will always be able to remove or add anything to any grocery list.
-        <br><br>
-        <strong>Technical Details</strong><br>Uses a Microservices Serverless Architecture on GCP using NodeJs. API's run in Docker and Kubernetes, DB's are in firestore (NoSQL).
-        </p>
-    `,
-    `
     Epic Systems Pi-Check-In Device
     <p  style = "font-size: 1.85vh;">
         <span style = "display: block; background-color: #c8c8ff; width: 17vh; border-radius: 20px;">

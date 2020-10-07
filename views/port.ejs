@@ -6,7 +6,8 @@
   <link rel="stylesheet" href="style.css">
   <link rel="icon" href="favicon.png">
   <script src="content.js"></script>
-  <title>Gasser Development</title>
+  <meta name="description" content="Jacob Gasser">
+  <title>Jacob Gasser</title>
 </head>
 <body>
   <script>
@@ -25,15 +26,15 @@
       Gend = Text.slice(Gend+10,Gend+11);
       let Message ="";
       if(Gend == 'M'){
-        Message = name + " is " + Prob + "% likely Male";
+        Message = "<p>" + name + " is " + Prob + "% likely Male</p>";
       }
       else if(Gend == 'F'){
-        Message = name + " is " + Prob + "% likely Female";
+        Message = "<p>" + name + " is " + Prob + "% likely Female</p>";
       }
       else{
-        Message = "Error: please, load this page as HTTP not HTTPS (reason in description) Sorry for the inconvenience!"
+        Message = "<a href='http://www.gasserdev.com/portfolio'>Error: please, load this page as HTTP not HTTPS (reason in description) Sorry for the inconvenience!</a>";
       }
-        document.getElementById("Cool").innerText = Message;
+        document.getElementById("Cool").innerHTML = Message;
       }
     }
   </script>

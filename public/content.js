@@ -72,9 +72,13 @@ var projects = new Array(
         each year on my Family's farm property. Taking meat into a butcher shop is expensive, so I used electrical engineering, an Arduino, raw materials, and C programming to make a 
         180 watt, 7 Cubic Foot dehydrator I named after the Norse Fire Giant Surtr. Below is a Electrical Diagram and apart of the Air Flow Design. The engineering
         specifications were to keep the amount of total Cubic Feet per Minute (CFM) down, as this means you have to heat up x many cubic feet per minute. Making
-        the requisite power needed proportional to the CFM. I use 4 Food Grade Thermometers to measure the temperature, and use a resistive heater I made out of .1 Meters
+        the requisite power needed proportional to the CFM. I use five Food Grade Thermometers to measure the temperature, and use a resistive heater I made out of .1 Meters
         of nichrome wire. I use two low CFM Computer fans (rated for 90 Degree Celsius < 170 degrees F) to move the air from the heater through the chamber to the chimney.
-    </p>
+        </p>
+        </span>
+        <span style = "display: block; width: 100%; border-radius: 20px; padding: 1%; font-size: 4vh;" id="Cool">
+        <img class="center" src="circuit.svg"> 
+        </span>
     `,
     `
     Portfolio Website
@@ -83,9 +87,10 @@ var projects = new Array(
             <img style ="width: 7vh" src = "engine.png">
             <img style ="width: 15vh" src= "nodejs.svg">
         </span>
-        Made with Node.Js, Express, App Engine, and BootStrap. In Web Development I focus on Back Ends and Cloud Development - but designing a website also is a Front End task. Instead of choosing 
-        Vue, Angular, or React I thought it would make more sense to choose native Js, CSS, and HTML. Native Js, HTML, and CSS have fast development times as
-        well as fast debugging turn over - which is why I think going without a Front End frame work was my best course of action for my website.
+        Made with Node.Js, Express, App Engine, and BootStrap. This website was made to demonstrate my ability in a wide range of subject areas. As well as give 
+        employers a better look at who I am. Technically speaking, I choose Node.Js, Express, App Engine, and BootStrap for their fast development times and ease of bug 
+        turnovers. I am not a Front End developer, so I wanted to keep more of my time towards relevant projects while still giving myself the challenge of designing a 
+        Front End. This is why I believe Node.Js, Express, App Engine, and BootStrap were the correct choice of tools for this site.
         <br>
         <br>
         <a href="/error"><button>Failure Page is an Easter Egg</button></a>

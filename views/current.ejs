@@ -5,16 +5,18 @@
   <link href="https://fonts.googleapis.com/css?family=Crimson+Text|Work+Sans:400,700" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
   <link rel="icon" href="favicon.png">
+  <script src="content.js"></script>
   <meta name="description" content="Jacob Gasser">
   <title>Jacob Gasser</title>
 </head>
 <body>
-<!-- Side Bar -->
-<%- include('partials/sidebar.ejs') %>
-<!-- Added HTML Via JavaScript -->
-<div id='addToMe' class="window">
-    <%- include('partials/about.ejs') %>
-</div>
-
+    <%- include('partials/sidebar.ejs') %>
+    <div class="window" style = "padding-left: 25%; padding-top: 5%; padding-right: 5%;">
+        <h1 class = "Header" style = "padding-bottom: 5%;font-size:7vh;">
+            Current Projects
+           <br>
+        </h1>
+        
+    </div>
 </body>
-</html> 
+</html>

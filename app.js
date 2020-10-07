@@ -15,6 +15,10 @@ app.get('/journey', (req,res)=>{
     res.render('journ.ejs')
 });
 
+app.get('/current', (req,res)=>{
+    res.render('current.ejs')
+});
+
 app.get('/portfolio', (req,res)=>{
     res.render('port.ejs')
 });
@@ -31,7 +35,7 @@ app.get('/*', (req,res)=>{
     res.render('ahahah.ejs')
 });
 
-const port = process.env.PORT || 8080;
+const port = process.env.PORT || 8070;
 app.listen(port, () => {
   console.log(`App listening on port ${port}`);
 });

@@ -12,12 +12,12 @@ var projects = new Array(
         <img style ="width: 7vh" src= "apache2.png">
       </span>
       Created an API that utilizes TensorFlow on Google Cloud Platform Compute Engine. This API receives a HTTP request that contains a Name parameter.
-      My NameGuess.py Neural Network then is given the string, converts the data for most optimal accuracy. Firstly trimming to 9 characters long, 
-      then zero-filling from the back. Next it converts the characters into their ascii values, after this for improved accuracy I convert 
-      the name into a 2 Dimensional array of ones and zeros 
-      (OneHotEncoding) then the Neural Network uses Convoluted Neural Layers to do its work and I return the NN Answer in a JSON Package. <br><br>
-      Hosted on Google Cloud Compute Engine (Similar to Azure Compute).
-      (Have not SSL Certified my API Server yet, therefore, you will need to load this page as http not https to use the search bar below.)
+        I created this NameGuess.py Neural Network (NN) late in 2019. Through an HTTP request the NN is given the string, uses feature optimization, inputs into the trained NN, then finally returns the answer. In detail: Firstly in feature optimization I trim to 9 characters long, 
+        then zero-fill from the back of the string (if string is less than 9 characters). Next I convert the characters into their ascii values, after this for improved accuracy I convert 
+        the name into a 2 Dimensional array of ones and zeros 
+        (OneHotEncoding) then my trained Neural Network uses learned relations from training to find a Probability of male or female. Then I return the NN's Answer in a JSON Package. To note, NN's do not memorize inputs to outputs, they learn over arching similarities. <br><br>
+        Hosted on Google Cloud Compute Engine (Similar to Azure Compute or AWS Compute).
+        (Have not SSL Certified my API Server yet, therefore, you will need to load this page as http not https to use the search bar below due to mixed content.)
       <br>
       <br>
       Name:

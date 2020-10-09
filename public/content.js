@@ -11,7 +11,7 @@ var projects = new Array(
         <img style ="width: 2vh" src= "tux.png">
         <img style ="width: 7vh" src= "apache2.png">
       </span>
-      Created an API that utilizes TensorFlow on Google Cloud Platform Compute Engine. This API receives a HTTP request that contains a Name parameter.
+        Created an API that utilizes TensorFlow on Google Cloud Platform Compute Engine. This API receives a HTTP request that contains a Name parameter.
         I created this NameGuess.py Neural Network (NN) late in 2019. Overall the API does the following: receives a HTTP request, uses feature optimization on the user's string, inputs into the trained NN, then finally returns the answer. In detail: after receiving the string we use feature optimization, firstly I trim to 9 characters long, 
         then zero-fill from the back of the string (if string is less than 9 characters). Next I convert the characters into their ascii values, after this for improved accuracy I convert 
         the name into a 2 Dimensional array of ones and zeros 

@@ -74,10 +74,11 @@ var projects = new Array(
             <img style ="width: 7vh" src = "engine.png">
             <img style ="width: 15vh" src= "nodejs.svg">
         </span>
-        Made with Node.Js, Express, App Engine, and BootStrap. This website was made to demonstrate my ability in a wide range of subject areas. As well as give 
+        Made with Node.Js, Express, App Engine, and BootStrap. This website was made to catalog my software engineering ability, as well as give 
         employers a better look at who I am. Technically speaking, I choose Node.Js, Express, App Engine, and BootStrap for their fast development times and ease of bug 
         turnovers. I am not a Front End developer, so I wanted to keep more of my time towards relevant projects while still giving myself the challenge of designing a 
-        Front End. This is why I believe Node.Js, Express, App Engine, and BootStrap were the correct choice of tools for this site.
+        Front End. This is why I believe Node.Js, Express, App Engine, and BootStrap were the correct choice of tools for this site. CI/CD set up through Github and Google Cloud 
+         repositories and Build API.
         <br>
         <br>
         <a href="/error"><button>Failure Page is an Easter Egg</button></a>

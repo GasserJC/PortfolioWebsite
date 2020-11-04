@@ -30,6 +30,38 @@ var projects = new Array(
         <strong>Technical Details</strong><br> Uses .Net Core Blazor application interacting with API requests via the CCD2 website. The Pi's will need circuit design for the scales 
         as well as embedded python files, these python files will interact with CCD2 API requests to update inventory counts as a function of tub weight.
         </p>
+    `,
+    `
+    UWW Research: Multimodal Landslide Detection 
+    <p  style = "font-size: 1.85vh;">
+        <span style = "display: block; background-color: #c8c8ff; width: 16vh; border-radius: 20px;">
+            <img style ="width: 8vh" src = "python.png">
+            <img style ="width: 6vh" src= "pi.png"> 
+        </span>
+        <strong>
+        Using multiple sensors such as Humidity and Load Cells, retrieve the information from sensors locally, and sent them to a database. After the data is sent 
+        to a database. Draw conclusions about the probabilities of land slides.
+        </p>
+    `,
+    `
+    UWW Software Engineering Course: iButtonLink Corrosion Sensor Application and Data Upload 
+    <p  style = "font-size: 1.85vh;">
+        <span style = "display: block; background-color: #c8c8ff; width: 16vh; border-radius: 20px;">
+            <img style ="width: 8vh" src = "python.png">
+            <img style ="width: 6vh" src= "pi.png"> 
+        </span>
+        <strong>
+        Using an iButtonLink sensor and perl script, create a GUI to interact with sensor data. Data must be uploaded to AWS Storage as well as ported from the
+         actively running Perl Script.
+        </p>
+    `,
+    `
+    UWW Research: Lidar and Image Recognition in Autonomous Driving (Coming Spring 2021)
+    <p  style = "font-size: 1.85vh;">
+        <strong>
+        Use lidar and image recognition within a built lab on campus to create a self driving vehicle. Multimodal sensor data must be retrieved, feature optimized, then
+         input into an Autonomous driving Neural Network to allow the car to drive.
+        </p>
     `
 );
 

@@ -2,13 +2,20 @@ var express = require('express');
 var path = require('path');
 var app = express();
 
+let viewCount = 0;
 app.use( express.static( "public" ) );
 
 app.set('view engine', 'ejs')
 app.set('views', path.join(__dirname, 'views'));
 
 app.get('/', (req,res)=>{
+    viewCount++;
     res.render('index.ejs')
+});
+
+app.get('/sub', (req,res)=>{
+    viewCount--;
+    res.status(200).send(`${viewCount}`)
 });
 
 app.get('/journey', (req,res)=>{
@@ -27,8 +34,12 @@ app.get('/contact', (req,res)=>{
     res.render('contact.ejs')
 });
 
-app.get('/resume', (req,res,next)=>{
+app.get('/resume', (req,res)=>{
     res.render('resume.ejs')
+});
+
+app.get('/count', (req,res)=>{
+    res.status(200).send(`${viewCount}`)
 });
 
 app.get('/*', (req,res)=>{

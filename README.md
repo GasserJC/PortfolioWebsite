@@ -1,1 +1,2 @@
-# Currently Not Deployed!!! (would typically be at gasserdev.com but I am currently not looking for employment.
+# Currently Not Deployed!!! 
+I have a dev job post graduation at Epic, so no need for port website
